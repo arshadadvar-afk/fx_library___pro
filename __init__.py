@@ -1,5 +1,9 @@
 import random
 
+file = open("member.txt", 'w')
+file.close()
+file2 = open("book.txt", 'w')
+file2.close()
 class Book:
     def __init__(self, name, author, book_id, category, is_borrowed):
         self.name = name
@@ -229,49 +233,53 @@ class Library :
 
         
 library = Library()
-library.load_file_member()
-library.load_file_books()
+try:
+    library.load_file_member()
+except FileNotFoundError:
+    print('please go to IDE and run this !')
+else:
+    library.load_file_books()
 
-while True:
-    print('1.add book\n2.remove_book\n3.show books\n4.search book\n5.add member\n6.remove member\n7.show members\n8.search member\n9.borrow book\n10.return book\n11.exit')
-    try:
-        menu = int(input('enter :'))
-    except ValueError:
-        print('please enter number !')
-    else:
-        if menu == 1:
-            library.add_book()
-
-        elif menu == 2:
-            library.remove_book()
-
-        elif menu == 3:
-            library.show_books()
-
-        elif menu == 4:
-            library.search_book()
-
-        elif menu == 5:
-            library.add_member()
-
-        elif menu == 6:
-            library.remove_member()
-
-        elif menu == 7:
-            library.show_members()
-
-        elif menu == 8:
-            library.search_member()
-
-        elif menu == 9:
-            library.borrowed_book()
-
-        elif menu == 10:
-            library.return_book()
-
-        elif menu == 11:
-            print('ok')
-            break
-
+    while True:
+        print('1.add book\n2.remove_book\n3.show books\n4.search book\n5.add member\n6.remove member\n7.show members\n8.search member\n9.borrow book\n10.return book\n11.exit')
+        try:
+            menu = int(input('enter :'))
+        except ValueError:
+            print('please enter number !')
         else:
-            print('please enter number in the menu !')
+            if menu == 1:
+                library.add_book()
+
+            elif menu == 2:
+                library.remove_book()
+
+            elif menu == 3:
+                library.show_books()
+
+            elif menu == 4:
+                library.search_book()
+
+            elif menu == 5:
+                library.add_member()
+
+            elif menu == 6:
+                library.remove_member()
+
+            elif menu == 7:
+                library.show_members()
+
+            elif menu == 8:
+                library.search_member()
+
+            elif menu == 9:
+                library.borrowed_book()
+
+            elif menu == 10:
+                library.return_book()
+
+            elif menu == 11:
+                print('ok')
+                break
+
+            else:
+                print('please enter number in the menu !')
