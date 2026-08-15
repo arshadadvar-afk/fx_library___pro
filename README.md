@@ -11,5 +11,3 @@ they can run this package !
 and you can install it:
     pip install fx_library_pro
 
-
-!!please run in 'Vs code' or 'visual studio code', I mean please run in IDE!!
