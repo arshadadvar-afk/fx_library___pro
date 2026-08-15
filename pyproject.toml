@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fx_library_pro"
-version = "1.0.2"
+version = "1.0.5"
 description = "this moudel is fx library pro"
 readme = "README.md"
 authors = [
