@@ -1,6 +1,6 @@
 this package is fx_library_pro
 
-in thi package we have member and book
+in the package we have member and book
 
 so member can borrow the book
 
